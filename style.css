@@ -1,0 +1,15 @@
+body {
+    background-color: #FFD8A8; /* turuncuya yakın krem */  
+    display: flex;             /* İçeriği esnek kutu düzenine alır */  
+    justify-content: center;   /* Yatayda ortalar */  
+    align-items: center;       /* Dikeyde ortalar */  
+    height: 100vh;             /* Sayfanın yüksekliğini tüm görünüm yüksekliği yapar */  
+    margin: 0;                 /* Tarayıcı varsayılan boşlukları kaldırır */  
+    font-family: 'Arial', sans-serif; /* Yazı tipi belirler */  
+}
+
+h1 {
+    color: darkslategray;      /* Yazı rengi */  
+    font-size: 5rem;           /* Yazı boyutu */  
+    text-align: center;        /* Yazıyı ortalar */  
+}
