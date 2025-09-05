@@ -1,52 +1,55 @@
-// Metinler
 const messages = [
-    "Özür dilerim, seni üzdüğüm için",
-    "Gerçekten istemeden yaptım",
-    "Umarım beni affedersin",
-    "Hata yaptım ve pişmanım"
+    "Mesaj1",
+    "Mesaj2",
+    "Mesaj3",
+    "Mesaj4",
+    "Mesaj5"
 ];
 
+const mutluOkuz = document.getElementById("mutlu-okuz");
+const uzgunOkuz = document.getElementById("uzgun-okuz");
+const speechText = document.getElementById("speech-text");
+const speechDiv = document.getElementById("speech-div");
+const buttonsDiv = document.getElementById("buttons-div");
+const noBtn = document.getElementById("no-btn");
+const yesBtn = document.getElementById("yes-btn");
+const altYazi = document.getElementById("alt-yazi");
+
 let msgIndex = 0;
+console.log(msgIndex);
 
-// Elemanlar
-const mutluOkuz = document.getElementById('mutlu-okuz');
-const uzgunOkuz = document.getElementById('uzgun-okuz');
-const speechText = document.getElementById('speech-text');
-const speechDiv = document.getElementById('speech-div');
-const buttonsDiv = document.getElementById('buttons-div');
-const yesBtn = document.getElementById('yes-btn');
-const noBtn = document.getElementById('no-btn');
+let buttonClicked = false;
 
-// İlk sahne: Selam! Mutlu öküz
-speechDiv.addEventListener('click', () => {
-    if(msgIndex < messages.length){
+speechDiv.addEventListener("click", () => {
+    if (buttonClicked) return;
+
+    if (msgIndex < messages.length) {
         speechText.textContent = messages[msgIndex];
         msgIndex++;
-        // Öküz üzgün olsun
         mutluOkuz.style.display = "none";
         uzgunOkuz.style.display = "block";
     } else {
-        // Son sahne
         speechText.textContent = "Beni affettin mi?";
         buttonsDiv.style.display = "flex";
-        // Öküz mutlu olacak
         mutluOkuz.style.display = "block";
         uzgunOkuz.style.display = "none";
+        altYazi.style.display = "none";
     }
 });
 
-// Evet butonu
-yesBtn.addEventListener('click', () => {
+yesBtn.addEventListener("click", () => {
+    speechDiv.removeEventListener
     buttonsDiv.style.display = "none";
-    speechText.textContent = "Seni seviyorum!";
+    speechText.textContent = "Hell Yeaah";
     mutluOkuz.style.display = "block";
     uzgunOkuz.style.display = "none";
+    buttonClicked = true
 });
 
-// Hayır butonu
-noBtn.addEventListener('click', () => {
+noBtn.addEventListener("click", () => {
     buttonsDiv.style.display = "none";
-    speechText.textContent = "Olson yine de, özür dilerim.";
+    speechText.textContent = "Hell Naah";
     mutluOkuz.style.display = "none";
     uzgunOkuz.style.display = "block";
+    buttonClicked = true
 });
