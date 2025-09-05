@@ -1,15 +1,50 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Kaydırmayı engeller */
+}
+
+
 body {
-    background-color: #FFD8A8; /* turuncuya yakın krem */  
+    background-color: darkslategray;
     display: flex;             /* İçeriği esnek kutu düzenine alır */  
     justify-content: center;   /* Yatayda ortalar */  
-    align-items: center;       /* Dikeyde ortalar */  
-    height: 100vh;             /* Sayfanın yüksekliğini tüm görünüm yüksekliği yapar */  
-    margin: 0;                 /* Tarayıcı varsayılan boşlukları kaldırır */  
+    /*align-items: center;        Dikeyde ortalar */
     font-family: 'Arial', sans-serif; /* Yazı tipi belirler */  
 }
 
-h1 {
-    color: darkslategray;      /* Yazı rengi */  
-    font-size: 5rem;           /* Yazı boyutu */  
-    text-align: center;        /* Yazıyı ortalar */  
+.cow-container {
+    border: 5px, solid, red;
+    position: relative; /* İçindeki öğeleri konumlandırmak için */
+
+    
 }
+
+.img-container {
+    border: 3px, solid, skyblue;
+    height: 50vh;
+}
+
+.okuzler {
+    height: 99%;       /* Container’ın yüksekliğini kapla */
+    width: auto;        /* Oranı koru */
+    object-fit: contain; /* Taşmayı engeller */
+}
+.speech-bubble {
+    border: 3px, solid, yellowgreen;
+    height: 50vh;             /* Alt yarıyı kaplar */
+    /*background: #fff;          Konuşma balonunun arka planı beyaz */
+    /*border-radius: 10px;       Köşeleri yuvarlatır */
+    /*padding: 10px;             İçindeki metin ile kenar arasına boşluk */
+    overflow-y: auto;         /* Çok metin olursa dikey kaydırma sağlar */
+}
+
+.text-container {
+    margin: 3%;
+    color: #FFD8A8;      /* Yazı rengi */  
+    font-size: 5rem;           /* Yazı boyutu */  
+    text-align: center;        /* Yazıyı ortalar */ 
+}
+
