@@ -1,50 +1,73 @@
+/* Genel ayarlar */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden; /* Kaydırmayı engeller */
+    font-family: Arial, sans-serif;
 }
-
 
 body {
-    background-color: darkslategray;
-    display: flex;             /* İçeriği esnek kutu düzenine alır */  
-    justify-content: center;   /* Yatayda ortalar */  
-    /*align-items: center;        Dikeyde ortalar */
-    font-family: 'Arial', sans-serif; /* Yazı tipi belirler */  
+    background-color: darkslategray; /* Arka plan rengi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.cow-container {
-    border: 5px, solid, red;
-    position: relative; /* İçindeki öğeleri konumlandırmak için */
-
-    
+/* Ana div tüm ekranı kaplasın */
+#main-div {
+    border: 5px solid red;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.img-container {
-    border: 3px, solid, skyblue;
-    height: 50vh;
+/* Öküz resmi divi (üst yarı) */
+#img-div {
+    border: 5px solid blue;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.okuzler {
-    height: 99%;       /* Container’ın yüksekliğini kapla */
-    width: auto;        /* Oranı koru */
-    object-fit: contain; /* Taşmayı engeller */
-}
-.speech-bubble {
-    border: 3px, solid, yellowgreen;
-    height: 50vh;             /* Alt yarıyı kaplar */
-    /*background: #fff;          Konuşma balonunun arka planı beyaz */
-    /*border-radius: 10px;       Köşeleri yuvarlatır */
-    /*padding: 10px;             İçindeki metin ile kenar arasına boşluk */
-    overflow-y: auto;         /* Çok metin olursa dikey kaydırma sağlar */
+#img-div img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
-.text-container {
-    margin: 3%;
-    color: #FFD8A8;      /* Yazı rengi */  
-    font-size: 5rem;           /* Yazı boyutu */  
-    text-align: center;        /* Yazıyı ortalar */ 
+/* Konuşma balonu (alt yarı) */
+#speech-div {
+    border: 5px solid green;
+    width: 100%;
+    height: 50%;
+    background-color: bisque;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: burlywood;
 }
 
+/* Butonlar */
+#buttons-div {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#buttons-div button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

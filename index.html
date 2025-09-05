@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +8,24 @@
 </head>
 <body>
 
-    <div class="cow-container">
-
-        <div class="img-container">
-
-        <img class="okuzler" id="mutlu-okuz" src="images/Mutlu Öküz.png" alt="Mutlu Öküz">
-        <img class="okuzler" id="uzgun-okuz" src="images/Üzgün Öküz.png" alt="Üzgün Öküz" style="display: none;">
-
+    <div id="main-div">
+        <!-- Öküz resimleri -->
+        <div id="img-div">
+            <img id="mutlu-okuz" src="./images/Mutlu Öküz.png" alt="Mutlu Öküz">
+            <img id="uzgun-okuz" src="./images/Üzgün Öküz.png" alt="Üzgün Öküz" style="display:none;">
         </div>
 
-        <div class="speech-bubble" id="speech-bubble">
-
-            <div class="text-container">
-
-                <p>Selam</p>
-
-            </div>
-
+        <!-- Konuşma balonu -->
+        <div id="speech-div">
+            <p id="speech-text">Selam!</p>
         </div>
 
-        <div class="buttons", style="display: none;">
-            
+        <!-- Son sahne butonları -->
+        <div id="buttons-div" style="display:none;">
+            <button id="yes-btn">Evet</button>
+            <button id="no-btn">Hayır</button>
         </div>
-
     </div>
-
-
-
-
 
     <script src="script.js"></script>
 </body>
