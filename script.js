@@ -1,9 +1,11 @@
 const messages = [
-    "Mesaj1",
-    "Mesaj2",
-    "Mesaj3",
-    "Mesaj4",
-    "Mesaj5"
+    "Sana kendimi affettirmek istiyorum.",
+    "Özür dilediğimde gerek yok dedin ama ben hala kendimi suçlu hissediyorum.",
+    "Son birkaç gün seninle konuşmadık...",
+    "ve bu süreçte senin eksikliğini, o günaydın mesajının eksikliğini sertçe hissettim.",
+    "Seninle dertleşmeye ve kafamda büyüttüğüm o...",
+    "küçük, hafif dertlerimi anlatmaya ihtiyacım var.",
+    "O neşeli ve umut veren tarafına inanarak şunu sormak istiyorum..."
 ];
 
 const mutluOkuz = document.getElementById("mutlu-okuz");
@@ -29,7 +31,7 @@ speechDiv.addEventListener("click", () => {
         mutluOkuz.style.display = "none";
         uzgunOkuz.style.display = "block";
     } else {
-        speechText.textContent = "Beni affettin mi?";
+        speechText.textContent = "Bu öküzü affeder misin?";
         buttonsDiv.style.display = "flex";
         mutluOkuz.style.display = "block";
         uzgunOkuz.style.display = "none";
@@ -40,7 +42,7 @@ speechDiv.addEventListener("click", () => {
 yesBtn.addEventListener("click", () => {
     speechDiv.removeEventListener
     buttonsDiv.style.display = "none";
-    speechText.textContent = "Hell Yeaah";
+    speechText.textContent = "Eğer affediyorsan, bana yeşil kalp gönder ki yüzüm gülsün.";
     mutluOkuz.style.display = "block";
     uzgunOkuz.style.display = "none";
     buttonClicked = true
@@ -48,7 +50,7 @@ yesBtn.addEventListener("click", () => {
 
 noBtn.addEventListener("click", () => {
     buttonsDiv.style.display = "none";
-    speechText.textContent = "Hell Naah";
+    speechText.textContent = "Peki o halde. Her şeyin sonu var demiştik değil mi? Eğer cevabın gerçekten hayırsa beni engelle ki anlayayım.";
     mutluOkuz.style.display = "none";
     uzgunOkuz.style.display = "block";
     buttonClicked = true

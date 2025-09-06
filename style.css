@@ -15,8 +15,8 @@ body {
 }
 
 #main-div {
-    width: 100%;
     height: 100%;
+    width: 100%;
     position: relative;
 }
 
@@ -36,36 +36,38 @@ body {
 
 #speech-div {
     border: 5px solid #6b5a43;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     height: 50%;
     background-color: bisque;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     text-align: center;
     padding: 10px;
-    font-size: 2rem;
+    box-sizing: border-box;
+    font-size: 1.61rem;
     color: #6b5a43;
     position: relative;
 }
 
 #alt-yazi {
     color: black;
-    font-size: 1.15rem;
+    font-size: 0.75rem;
     position: absolute;
-    bottom: 25px;
-    right: 55px;
+    bottom: 1%;
+    right: 3%;
 }
 
 #buttons-div {
     position: absolute;
-    left: 17px;
     bottom: 75px;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 75px;
+    align-items: center;
+    gap: 3%;
 }
 
 #buttons-div button {
